@@ -67,7 +67,7 @@ This target links against the official CPython `python37.dll`.
 **Compilation Command:**
 
 ```bash
-cl /LD loopmod.c python37.lib /I "C:\Python37\include" /link /OUT:timer.pyd
+cl /LD loopmod.c python37.lib /I "C:\Python37\include" /link /OUT:loopmod.pyd
 ```
 
 ---
@@ -113,7 +113,7 @@ lib /def:python37_x64.def /out:python37_x64.lib /machine:x64
 Compile the C-extension, linking against the custom library and ensuring you skip the default `python37.lib` dependency:
 
 ```bash
-cl /LD loopmod.c python37_x64.lib /I "C:\Python37\include" /link /OUT:timer.pyd /nodefaultlib:python37.lib
+cl /LD loopmod.c python37_x64.lib /I "C:\Python37\include" /link /OUT:loopmod.pyd /nodefaultlib:python37.lib
 ```
 
 #### 5. Installation and Import
